@@ -6,21 +6,23 @@ function Letter(letter) {
     this.letter = letter;
     this.isGuessed = false;
 
-    this.getCharacter = function() {
-        if(!this.isGuessed) {
+    this.getCharacter = function () {
+        if (!this.isGuessed) {
             return "_";
         } else {
             return this.letter;
         }
     }
-}
 
-//A function that takes a character as an argument and checks it against the underlying character,
-// updating the stored boolean value to true if it was guessed correctly
-this.checkLetter = function(guess) {
-    if(guess === this.letter) {
-        this.isGuessed = true;
+    //A function that takes a character as an argument and checks it against the underlying character,
+    // updating the stored boolean value to true if it was guessed correctly
+    this.checkLetter = function (guess) {
+        if (guess === this.letter) {
+            this.isGuessed = true;
+        }
     }
 }
+
+
 
 module.exports = Letter;

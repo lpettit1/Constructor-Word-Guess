@@ -66,6 +66,7 @@ function makeGuess() {
             word.letters.forEach(letter => {
                 letter.checkLetter(data.guessedLetter);
                 checker.push(letter.getCharacter());
+                console.log(data.guessedLetter)
             });
             if (guesses > 0 && checker.indexOf("_") !== -1) {
                 guesses--;
