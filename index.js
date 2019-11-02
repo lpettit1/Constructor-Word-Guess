@@ -23,7 +23,7 @@ function init() {
 
 function playGame() {
     pickedWord = "";
-    guesses = 20;
+    guesses = 10;
     if (pickedWords.length < wordBank.length) {
         pickedWord = getWord();
     } else {
@@ -66,7 +66,7 @@ function makeGuess() {
             word.letters.forEach(letter => {
                 letter.checkLetter(data.guessedLetter);
                 checker.push(letter.getCharacter());
-                console.log(data.guessedLetter)
+                // console.log(data.guessedLetter)
             });
             if (guesses > 0 && checker.indexOf("_") !== -1) {
                 guesses--;
@@ -79,7 +79,7 @@ function makeGuess() {
                 }
             } else {
                 console.log("YOU HAVE GUESS THE WORD AND ARE FOUND TO BE WORTHY TO ENTER VALHALLA!");
-                console.log("\n--------------------\na");
+                console.log("\n--------------------\n");
                 console.log(word.update());
                 playGame();
             }
